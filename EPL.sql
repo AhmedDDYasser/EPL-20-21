@@ -9,7 +9,7 @@ group by Club
 order by [Goals Scored] desc --asc
 
 -- AVG players age per club 
-	-- Man United is least club In avg players age (23) and crystal can first (28)
+	-- Man United is least club In avg players age (23) and crystal came first (28)
 SELECT Club, CAST(AVG(Age) AS INT) AS [Avg Players Age], COUNT(Name) AS [Number of Players]
 FROM epl
 GROUP BY Club
@@ -17,7 +17,7 @@ ORDER BY [Avg Players Age] ,[Number of Players] ASC --DESC
 
 
 
--- Passes Completed a
+-- Passes Completed 
 	-- Ofc man city came first based on their play style followed by liverpool in second place and chelsea third
 SELECT Club, SUM (Passes_Attempted) [Passes Completed] , CAST(AVG(Perc_Passes_Completed) as int ) [Percent Passes Completed Per Match]
 FROM epl
